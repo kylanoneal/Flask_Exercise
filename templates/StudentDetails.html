@@ -1,9 +1,25 @@
+{% extends '_layout.html' %}
+
 {% block content %}
-<h1>Student Details</h1>
-<table>
+<h1 class="mb-3">Student Details</h1>
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Organization</th>
+      </tr>
+    </thead>
+
+    <tbody>
     {%for key,value in studentOrganisationDetails.items()%}
+    <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+    </tr>
 
     {%endfor%}
+</tbody>
 </table>
 
 {% endblock %}

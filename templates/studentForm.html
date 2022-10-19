@@ -1,6 +1,21 @@
-{% block content %}
-<h1>Register</h1>
-<h4>Enter Student Information below</h4>
-<!--Form to request user's name-->
+{% extends '_layout.html' %}
 
+{% block content %}
+<h1 class="mb-3">Register</h1>
+<h5>Enter Student Information below</h5>
+<hr>
+<!--Form to request user's name-->
+<form method="POST">
+    <input type="text" name="name" id="name" placeholder="Enter name here">
+    <hr>
+    <h6>Select Organization</h6>
+    <select name="Organization">
+        <option value="Boston Celtics">Boston Celtics</option>
+        <option value="Golden State Warriors">Golden State Warriors</option>
+        <option value="Milwaukee Bucks">Milwaukee Bucks</option>
+        <option value="Phoenix Suns">Phoenix Suns</option>
+        <option value="Charlotte Hornets">Charlotte Hornets</option>
+      </select>
+    <input type="submit" value="Submit">
+</form>
 {% endblock %}

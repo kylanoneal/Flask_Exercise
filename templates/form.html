@@ -1,4 +1,10 @@
-{% block content %}
-<h1>Home</h1>
+{% extends '_layout.html' %}
 
+{% block content %}
+<h1 class="mb-3">Enter an integer number</h1>
+<!--Form asking for a number-->
+<form method="POST">
+    <input type="text" name="number" id="number">
+    <input type="submit" value="Submit">
+</form>
 {% endblock %}
